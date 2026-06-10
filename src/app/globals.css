@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { background: #ffffff; color: #001f29; }
+  ::selection { background: #fdb93035; color: #001f29; }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #f8fbfc; }
+  ::-webkit-scrollbar-thumb { background: #fdb93060; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #f0a800; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-8 py-4
+           bg-y-gradient text-teal font-sans text-[0.8rem] font-semibold
+           tracking-[0.1em] uppercase shadow-y-sm hover:shadow-y-md
+           transition-all duration-300 hover:-translate-y-0.5;
+  }
+  .btn-teal {
+    @apply inline-flex items-center justify-center px-8 py-4
+           bg-teal-gradient text-white font-sans text-[0.8rem] font-semibold
+           tracking-[0.1em] uppercase shadow-teal-sm hover:shadow-teal-md
+           transition-all duration-300 hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4
+           border-2 border-teal text-teal text-[0.8rem] font-medium
+           tracking-[0.1em] uppercase transition-all duration-300
+           hover:bg-teal hover:text-white hover:-translate-y-0.5;
+  }
+  .btn-dark {
+    @apply inline-flex items-center justify-center px-8 py-4
+           bg-teal text-white text-[0.8rem] font-semibold tracking-[0.1em] uppercase
+           shadow-teal-sm hover:shadow-teal-md hover:bg-teal-2
+           transition-all duration-300 hover:-translate-y-0.5;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-[0.8rem] font-medium
+           tracking-[0.1em] capitalize text-ink/50 hover:text-teal
+           transition-colors after:content-['→']
+           after:transition-transform after:duration-200 hover:after:translate-x-1;
+  }
+  .nav-link {
+    @apply text-[0.82rem] tracking-[0.12em] uppercase font-semibold text-ink/60
+           hover:text-teal transition-colors relative
+           after:absolute after:bottom-[-4px] after:left-0 after:right-0
+           after:h-[2px] after:bg-y-gradient after:scale-x-0 after:origin-left
+           after:transition-transform after:duration-300 hover:after:scale-x-100;
+  }
+  .section-tag   { @apply text-[0.7rem] font-semibold tracking-[0.22em] uppercase text-y-600; }
+  .section-title { @apply font-serif font-light leading-tight text-teal; }
+  .section-body  { @apply text-ink/55 leading-[1.88]; }
+  .form-field {
+    @apply w-full bg-transparent border-0 border-b border-ink/15 py-3
+           text-ink placeholder:text-ink/25 focus:outline-none focus:border-y-400
+           transition-colors font-sans text-base;
+  }
+  .shimmer-text {
+    background: linear-gradient(90deg,#c98d00 0%,#fdb930 30%,#ffe08a 50%,#fdb930 70%,#c98d00 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+  .badge-teal {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-teal-light text-teal
+           text-[0.72rem] font-semibold tracking-[0.1em] uppercase rounded-full;
+  }
+  .badge-brand {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-y-100 text-y-700
+           text-[0.72rem] font-semibold tracking-[0.1em] uppercase rounded-full;
+  }
+  .card {
+    @apply bg-white border border-border shadow-card
+           hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300;
+  }
+}
