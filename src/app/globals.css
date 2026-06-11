@@ -15,31 +15,31 @@
 @layer components {
   .btn-primary {
     @apply relative inline-flex items-center justify-center px-8 py-4
-           bg-y-gradient text-teal font-sans text-[0.8rem] font-semibold
-           tracking-[0.1em] uppercase shadow-y-sm hover:shadow-y-md
+           bg-y-400 text-teal font-sans text-[0.8rem] font-semibold rounded-[25px]
+           tracking-[0.1em] capitalize shadow-y-sm hover:shadow-y-md
            transition-all duration-300 hover:-translate-y-0.5;
   }
   .btn-teal {
     @apply inline-flex items-center justify-center px-8 py-4
-           bg-teal-gradient text-white font-sans text-[0.8rem] font-semibold
-           tracking-[0.1em] uppercase shadow-teal-sm hover:shadow-teal-md
+           bg-teal text-white font-sans text-[0.8rem] font-semibold rounded-[25px]
+           tracking-[0.1em] capitalize shadow-teal-sm hover:shadow-teal-md
            transition-all duration-300 hover:-translate-y-0.5;
   }
   .btn-outline {
     @apply inline-flex items-center justify-center px-8 py-4
-           border-2 border-teal text-teal text-[0.8rem] font-medium
-           tracking-[0.1em] uppercase transition-all duration-300
+           border-2 border-teal text-teal text-[0.8rem] font-medium rounded-[25px]
+           tracking-[0.1em] capitalize transition-all duration-300
            hover:bg-teal hover:text-white hover:-translate-y-0.5;
   }
   .btn-dark {
     @apply inline-flex items-center justify-center px-8 py-4
-           bg-teal text-white text-[0.8rem] font-semibold tracking-[0.1em] uppercase
+           bg-teal text-white text-[0.8rem] font-semibold rounded-[25px] tracking-[0.1em] capitalize
            shadow-teal-sm hover:shadow-teal-md hover:bg-teal-2
            transition-all duration-300 hover:-translate-y-0.5;
   }
   .btn-ghost {
     @apply inline-flex items-center gap-2 text-[0.8rem] font-medium
-           tracking-[0.1em] capitalize text-ink/50 hover:text-teal
+           tracking-[0.1em] capitalize text-ink-body hover:text-teal
            transition-colors after:content-['→']
            after:transition-transform after:duration-200 hover:after:translate-x-1;
   }
@@ -50,12 +50,12 @@
            after:h-[2px] after:bg-y-gradient after:scale-x-0 after:origin-left
            after:transition-transform after:duration-300 hover:after:scale-x-100;
   }
-  .section-tag   { @apply text-[0.7rem] font-semibold tracking-[0.22em] uppercase text-y-600; }
+  .section-tag   { @apply text-[0.7rem] font-semibold tracking-[0.22em] uppercase text-y-400; }
   .section-title { @apply font-serif font-light leading-tight text-teal; }
-  .section-body  { @apply text-ink/55 leading-[1.88]; }
+  .section-body { @apply leading-[1.88]; color: #005677; }
   .form-field {
     @apply w-full bg-transparent border-0 border-b border-ink/15 py-3
-           text-ink placeholder:text-ink/25 focus:outline-none focus:border-y-400
+           text-ink placeholder:text-ink-body focus:outline-none focus:border-y-400
            transition-colors font-sans text-base;
   }
   .shimmer-text {
@@ -78,4 +78,22 @@
     @apply bg-white border border-border shadow-card
            hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300;
   }
+.text-fill-animation {
+  position: relative;
+  display: inline-block;
+  color: #003e51; /* visible by default */
+}
+.text-fill-animation::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #fdb930;
+  transition: width 1s ease-out;
+}
+.text-fill-animation.is-visible::after {
+  width: 100%;
+}
 }

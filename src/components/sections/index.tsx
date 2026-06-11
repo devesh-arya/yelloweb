@@ -11,11 +11,12 @@ import {
   TRUSTED_PARTNERS, STATS, SERVICES,
   PORTFOLIO, TESTIMONIALS, INDUSTRIES, WHY_US,
 } from "@/lib/data";
+import TextFillAnimation from "@/components/ui/TextFillAnimation";
 
 // ── Hero ──────────────────────────────────────────────────────────────────
 export function HeroSection() {
   return (
-    <section 
+    <section
       className="relative min-h-screen flex flex-col justify-center px-8 lg:px-16 pt-32 pb-24 overflow-hidden"
       style={{
         backgroundImage: "url('/images/bg-img.png')",
@@ -24,7 +25,6 @@ export function HeroSection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-
       <FadeUp>
         <span className="badge-teal mb-6 inline-flex">
           Full-Stack Web Development Studio
@@ -32,9 +32,11 @@ export function HeroSection() {
       </FadeUp>
 
       <FadeUp delay={0.12}>
-        <h1 className="font-serif text-[clamp(2.5rem,6vw,90px)] font-medium leading-[1.04] max-w-[860px] mb-8 text-teal">          Building Websites
-          <br />
-          with <em className="shimmer-text not-italic">Purpose</em>
+        <h1 className="font-serif text-[clamp(2.5rem,6vw,90px)] font-medium leading-[1.21] max-w-[860px] mb-8 text-teal">
+          Building Websites with {" "}
+          <TextFillAnimation>
+            Purpose
+          </TextFillAnimation>
         </h1>
       </FadeUp>
 
@@ -44,7 +46,7 @@ export function HeroSection() {
 
       <FadeUp
         delay={0.28}
-        className="max-w-[500px] text-[1.06rem] text-ink/55 leading-[1.82] mb-12"
+        className="max-w-[500px] text-[1.06rem] text-ink-body leading-[1.82] mb-12"
       >
         Creating purpose-driven digital experiences — accessible, engaging,
         responsive, and SEO-optimized.
@@ -54,7 +56,7 @@ export function HeroSection() {
         <Link href="/contact" className="btn-primary">
           Request a Quote
         </Link>
-        <Link href="/about" className="btn-ghost">
+        <Link href="/about" className="btn-teal">
           Who We Are
         </Link>
       </FadeUp>
@@ -79,7 +81,7 @@ export function TrustedPartners() {
               <span className="w-1.5 h-1.5 rounded-full bg-y-400/50 group-hover:bg-y-500 transition-colors" />
               <div>
                 <div className="font-semibold text-teal/50 group-hover:text-teal/80 transition-colors whitespace-nowrap text-sm">{p.name}</div>
-                <div className="text-[0.6rem] tracking-[0.14em] uppercase text-ink/25 group-hover:text-ink/45 transition-colors">{p.sub}</div>
+                <div className="text-[0.6rem] tracking-[0.14em] uppercase text-ink-body group-hover:text-ink/45 transition-colors">{p.sub}</div>
               </div>
             </div>
           ))}
@@ -98,7 +100,7 @@ export function WhoWeAre() {
         <FadeUp delay={0.1}>
           <h2 className="section-title font-medium  text-[clamp(2.2rem,4vw,3.5rem)]">
             "Every project begins with{" "}
-            <em className="shimmer-text not-italic">listening</em>"
+            <TextFillAnimation>listening</TextFillAnimation>"
           </h2>
         </FadeUp>
         <FadeUp delay={0.2} className="section-body mb-6">
@@ -130,7 +132,7 @@ export function WhoWeAre() {
                   <div className="font-serif text-5xl font-light text-teal leading-none mb-1">
                     <CountUp end={parseInt(s.value.replace(/\D/g,""))} suffix={s.value.replace(/[0-9]/g,"")} />
                   </div>
-                  <div className="text-[0.75rem] tracking-[0.15em] uppercase text-ink/40">{s.label}</div>
+                  <div className="text-[0.75rem] tracking-[0.15em] uppercase text-ink-body">{s.label}</div>
                 </StaggerItem>
               ))}
             </StaggerContainer>
@@ -150,7 +152,9 @@ export function ServicesSection() {
         <FadeUp className="section-tag mb-4">What We Do</FadeUp>
         <FadeUp delay={0.1} as="h2" className="section-title font-medium text-[clamp(2.2rem,4vw,3.5rem)]">
           Full-stack capability,{" "}
-          <em className="shimmer-text not-italic">end to end</em>
+          <TextFillAnimation>
+            end to end
+          </TextFillAnimation>
         </FadeUp>
         <FadeUp delay={0.2} className="section-body mt-4">
           From initial discovery to launch — every layer of the digital stack, covered.
@@ -160,10 +164,10 @@ export function ServicesSection() {
         {SERVICES.map(s => (
           <StaggerItem key={s.title}>
             <HoverCard className="h-full bg-white border border-border p-8 group">
-              <div className="font-serif text-5xl font-light text-teal/20 leading-none mb-5 group-hover:text-teal/40 transition-colors duration-300">{s.number}</div>
+              <div className="font-serif text-5xl font-light text-tealleading-none mb-5 group-hover:text-teal/40 transition-colors duration-300">{s.number}</div>
               <div className="w-8 h-0.5 bg-y-gradient mb-4 group-hover:w-16 transition-all duration-500 rounded-full" />
               <h3 className="font-serif text-xl font-normal mb-3 text-teal">{s.title}</h3>
-              <p className="text-sm text-ink/50 leading-relaxed">{s.description}</p>
+              <p className="text-sm text-ink-body leading-relaxed">{s.description}</p>
             </HoverCard>
           </StaggerItem>
         ))}
@@ -172,7 +176,7 @@ export function ServicesSection() {
             <Link href="/services" className="text-center">
               <div className="font-serif text-xl font-light text-white mb-2">View All Services</div>
               <div className="w-10 h-0.5 bg-y-400 mx-auto mb-2 rounded-full" />
-              <div className="text-xs text-white/60 tracking-wider">Let's find the right solution</div>
+              <div className="text-xs text-white tracking-wider">Let's find the right solution</div>
             </Link>
           </HoverCard>
         </StaggerItem>
@@ -188,7 +192,10 @@ export function PortfolioSection() {
       <FadeUp className="section-tag mb-4">Case Studies</FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="section-title font-medium text-[clamp(2.2rem,4vw,3.5rem)] max-w-[640px]">
-          Work that <em className="shimmer-text not-italic">speaks</em>
+          Work that {''}
+          <TextFillAnimation>
+            speaks
+          </TextFillAnimation>
         </h2>
       </FadeUp>
       <DrawLine delay={0.3} className="mt-4 mb-12 max-w-xl" color="bg-y-gradient" />
@@ -200,7 +207,7 @@ export function PortfolioSection() {
               <div className="absolute top-0 right-0 w-16 h-16 bg-y-400/15 group-hover:bg-y-400/30 transition-colors duration-300" />
               <p className="text-xs tracking-[0.16em] uppercase text-y-600 mb-2 font-semibold">{item.tag}</p>
               <h3 className="font-serif text-2xl lg:text-3xl font-light text-teal mb-2 group-hover:text-y-700 transition-colors duration-300">{item.title}</h3>
-              <p className="text-sm text-ink/50 leading-relaxed">{item.description}</p>
+              <p className="text-sm text-ink-body leading-relaxed">{item.description}</p>
               <div className="mt-4 flex items-center gap-2 text-y-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 View Case Study <span>→</span>
               </div>
@@ -223,7 +230,7 @@ export function TestimonialsSection() {
           <FadeUp className="section-tag mb-4">Client Voices</FadeUp>
           <FadeUp delay={0.05}>
             <h2 className="section-title font-medium text-[clamp(2.2rem,4vw,3.5rem)]">
-              What our partners <em className="shimmer-text not-italic">say</em>
+              What our partners <TextFillAnimation>say</TextFillAnimation>
             </h2>
           </FadeUp>
         </div>
@@ -231,7 +238,7 @@ export function TestimonialsSection() {
           {TESTIMONIALS.map(t => (
             <StaggerItem key={t.author}>
               <HoverCard className="relative bg-white border border-border shadow-card p-8 h-full flex flex-col">
-                <div className="absolute top-4 right-6 font-serif text-7xl font-light text-y-400/20 leading-none select-none">"</div>
+                <div className="absolute top-4 right-6 font-serif text-7xl font-light text-y-400 leading-none select-none">"</div>
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(5)].map((_,si) => (
                     <svg key={si} className="w-3.5 h-3.5 fill-y-400" viewBox="0 0 20 20">
@@ -291,7 +298,7 @@ export function WhyUsGrid() {
           <HoverCard className="h-full bg-white p-10 lg:p-12 group">
             <div className="w-12 h-12 rounded-full bg-teal-light flex items-center justify-center text-xl text-teal mb-5">{item.icon}</div>
             <h3 className="font-serif text-xl font-normal mb-3 text-teal">{item.title}</h3>
-            <p className="text-sm text-ink/50 leading-relaxed">{item.description}</p>
+            <p className="text-sm text-ink-body leading-relaxed">{item.description}</p>
             <div className="mt-5 w-6 h-0.5 bg-y-gradient rounded-full group-hover:w-12 transition-all duration-500" />
           </HoverCard>
         </ScaleIn>

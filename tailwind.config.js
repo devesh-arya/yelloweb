@@ -13,7 +13,7 @@ const config = {
           light: "#e6f2f6", muted: "#4a7a8a",
         },
         canvas: { DEFAULT: "#ffffff", 2: "#f8fbfc", 3: "#f0f6f8" },
-        ink: { DEFAULT: "#001f29", 2: "#002d3d", 3: "#003347", muted: "#4a6a75" },
+        ink: { DEFAULT: "#001f29", 2: "#002d3d", 3: "#003347", muted: "#4a6a75", body: "#005677" },
         border: { DEFAULT: "#dde8ec", strong: "#c0d4db" },
       },
       fontFamily: {

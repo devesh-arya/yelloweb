@@ -17,10 +17,7 @@ export function CTABanner({ title, em, cta = "Start the Conversation", href = "/
           </h2>
           <DrawLine delay={0.2} className="mt-4 w-20" color={isAmber ? "bg-teal/30" : "bg-y-400"} />
         </div>
-        <Link href={href} className={`whitespace-nowrap inline-flex items-center justify-center px-8 py-4 text-[0.8rem] font-semibold tracking-[0.1em] uppercase transition-all duration-300 hover:-translate-y-0.5 ${
-          isAmber ? "bg-teal text-white shadow-teal-sm hover:shadow-teal-md hover:bg-teal-2"
-                  : "bg-y-gradient text-teal shadow-y-sm hover:shadow-y-md"
-        }`}>{cta}</Link>
+        <Link href={href} className={`btn-teal`}>{cta}</Link>
       </FadeUp>
     </section>
   );

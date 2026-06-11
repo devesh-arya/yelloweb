@@ -17,7 +17,7 @@ export default function ContactPage() {
       <FadeUp className="section-tag mb-4">Inquiry</FadeUp>
       <FadeUp delay={0.1}><h1 className="font-serif text-[clamp(3rem,6vw,5rem)] font-light text-teal max-w-[700px] leading-tight">Let's build something <em className="shimmer-text not-italic">together</em></h1></FadeUp>
       <DrawLine delay={0.3} className="mt-6 mb-4 max-w-xs" color="bg-y-gradient" />
-      <FadeUp delay={0.2} className="max-w-[520px] text-lg text-ink/55 leading-relaxed">Tell us about your project. We'll respond within one business day.</FadeUp>
+      <FadeUp delay={0.2} className="max-w-[520px] text-lg text-ink-body leading-relaxed">Tell us about your project. We'll respond within one business day.</FadeUp>
     </section>
     <section className="px-8 lg:px-16 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 bg-white">
       <SlideIn direction="left" delay={0.1}>
@@ -56,7 +56,7 @@ export default function ContactPage() {
               </svg>
             </div>
             <div className="font-serif text-3xl font-light text-teal mb-2">Thank you</div>
-            <p className="text-ink/55 leading-relaxed">We'll respond within one business day.</p>
+            <p className="text-ink-body leading-relaxed">We'll respond within one business day.</p>
           </div>
         )}
       </SlideIn>

@@ -9,7 +9,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
       <h1 className="font-serif text-[clamp(2rem,5vw,4rem)] font-light text-teal mb-4">
         Unexpected <em className="shimmer-text not-italic">error</em>
       </h1>
-      <p className="text-ink/50 max-w-[400px] leading-relaxed mb-10">An error occurred loading this page.</p>
+      <p className="text-ink-body max-w-[400px] leading-relaxed mb-10">An error occurred loading this page.</p>
       <div className="flex gap-6">
         <button onClick={reset} className="btn-primary">Try Again</button>
         <Link href="/" className="btn-ghost">Back to Home</Link>

@@ -41,7 +41,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <Link href="/contact" className="hidden lg:inline-flex btn-primary text-[0.75rem] px-5 py-3">
+        <Link href="/contact" className="hidden lg:inline-flex btn-teal text-[0.75rem] px-5 py-3">
           Request a Quote
         </Link>
 
