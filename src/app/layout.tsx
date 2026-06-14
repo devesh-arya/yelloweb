@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import type { Metadata } from "next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,6 +17,17 @@ export const metadata: Metadata = {
   description: "Purpose-driven digital experiences. Accessible, engaging, responsive, and SEO-optimized websites for organizations that want more than a template.",
   keywords: ["web development","full-stack","Next.js","React","API integration","cloud solutions"],
   authors: [{ name: "Yelloweb" }],
+    icons: {
+    icon: [
+      { url: "/favicons/favicon.ico" },
+      { url: "/favicons/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicons/apple-touch-icon.png" },
+    ],
+  },
+  manifest: "/favicons/site.webmanifest",
   openGraph: {
     type: "website", locale: "en_US", url: "https://yelloweb.co",
     siteName: "Yelloweb",

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { FadeUp, SlideIn, StaggerContainer, StaggerItem, DrawLine } from "@/components/ui/Motion";
 import { Footer } from "@/components/layout/Footer";
+import TextFillAnimation from "@/components/ui/TextFillAnimation";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,7 +16,7 @@ export default function ContactPage() {
     <section className="px-8 lg:px-16 pt-40 pb-16 bg-canvas-2 border-b border-border relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-y-400/8 rounded-full blur-3xl pointer-events-none" />
       <FadeUp className="section-tag mb-4">Inquiry</FadeUp>
-      <FadeUp delay={0.1}><h1 className="font-serif text-[clamp(3rem,6vw,5rem)] font-light text-teal max-w-[700px] leading-tight">Let's build something <em className="shimmer-text not-italic">together</em></h1></FadeUp>
+      <FadeUp delay={0.1}><h1 className="font-serif text-[clamp(3rem,6vw,5rem)] font-semibold text-teal max-w-[700px] leading-tight">Let's build something <TextFillAnimation>together</TextFillAnimation></h1></FadeUp>
       <DrawLine delay={0.3} className="mt-6 mb-4 max-w-xs" color="bg-y-gradient" />
       <FadeUp delay={0.2} className="max-w-[520px] text-lg text-ink-body leading-relaxed">Tell us about your project. We'll respond within one business day.</FadeUp>
     </section>

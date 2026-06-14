@@ -3,13 +3,14 @@ import { SERVICES } from "@/lib/data";
 import { FadeUp, StaggerContainer, HoverCard, StaggerItem, DrawLine } from "@/components/ui/Motion";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { Footer } from "@/components/layout/Footer";
+import TextFillAnimation from "@/components/ui/TextFillAnimation";
 export const metadata: Metadata = { title:"Services", description:"Full-stack web development services." };
 export default function ServicesPage() {
   return <>
     <section className="px-8 lg:px-16 pt-40 pb-16 bg-canvas-2 border-b border-border relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-teal/5 rounded-full blur-3xl pointer-events-none" />
       <FadeUp className="section-tag mb-4">What We Do</FadeUp>
-      <FadeUp delay={0.1}><h1 className="font-serif text-[clamp(3rem,6vw,5rem)] font-light text-teal max-w-[700px] leading-tight">Full-stack capability, <em className="shimmer-text not-italic">end to end</em></h1></FadeUp>
+      <FadeUp delay={0.1}><h1 className="font-serif text-[clamp(3rem,6vw,5rem)] font-semibold text-teal max-w-[700px] leading-tight">Full-stack capability, <TextFillAnimation>end to end</TextFillAnimation> </h1></FadeUp>
       <DrawLine delay={0.3} className="mt-6 mb-4 max-w-xs" color="bg-y-gradient" />
       <FadeUp delay={0.2} className="max-w-[520px] text-lg text-ink-body leading-relaxed">Five core disciplines. One integrated studio.</FadeUp>
     </section>

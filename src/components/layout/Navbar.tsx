@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_ITEMS } from "@/lib/data";
+import Image from "next/image";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,10 +28,18 @@ export function Navbar() {
         scrolled ? "bg-white/96 backdrop-blur-md border-b border-border shadow-sm py-4 px-8 lg:px-16"
                  : "bg-transparent py-6 px-8 lg:px-16"
       }`}>
-        <Link href="/" className="font-serif text-2xl font-semibold text-teal tracking-wide relative group">
-          Yellow<span className="text-y-400 group-hover:text-y-500 transition-colors">eb</span>
-          <span className="absolute -bottom-0.5 left-0 w-full h-0.5 bg-y-gradient scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
-        </Link>
+        
+
+<Link href="/" className="relative group flex items-center">
+  <Image
+    src="/images/logo.png"
+    alt="Yelloweb"
+    width={180}
+    height={50}
+    priority
+    className="h-auto w-auto"
+  />
+</Link>
 
         <nav className="hidden lg:flex items-center gap-10">
           {NAV_ITEMS.map(item => (

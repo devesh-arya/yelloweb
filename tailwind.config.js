@@ -21,7 +21,7 @@ const config = {
         sans:  ["var(--font-poppins)", "sans-serif"],
       },
       backgroundImage: {
-        "y-gradient":    "linear-gradient(135deg,#fdb930 0%,#f0a800 60%,#c98d00 100%)",
+        "y-gradient":    "linear-gradient(135deg, #fdb930 0%, #fdb930 100%)",
         "teal-gradient": "linear-gradient(135deg,#003e51 0%,#004d65 60%,#005f7d 100%)",
         "y-glow":        "radial-gradient(ellipse 80% 60% at 50% -10%,rgba(253,185,48,0.20) 0%,transparent 60%)",
         "y-stripe":      "repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(253,185,48,0.06) 10px,rgba(253,185,48,0.06) 20px)",
